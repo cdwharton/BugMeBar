@@ -6,7 +6,7 @@ A simple little annoying notification bar plugin
 
 Demo
 ----
-[http://weare2ndfloor.com/bugmebar/](http://http://weare2ndfloor.com/bugmebar/)
+[http://weare2ndfloor.com/bugmebar/](http://weare2ndfloor.com/bugmebar/)
 
 
 Dependencies
