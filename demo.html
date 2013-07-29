@@ -1,0 +1,129 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!--[if lt IE 9]> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+<title>BugMeBar Demo</title>
+
+<style>
+/* Basic CSS */
+html {
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 22px/1.5 "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	text-align: center;
+	background: #34495e;
+	color: #fff;
+	text-rendering: optimizeLegibility;	
+}
+
+h1 {
+	font-size: 58px;
+	font-weight: 600;
+	margin: 7.5% 0 0 0;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: 500;
+	margin: 0;
+	opacity: 0.65;
+	filter: alpha(opacity=65);
+}
+
+a {
+	color: #f77564;
+}
+
+a:hover {
+	color: #fff;
+}
+
+p {
+	color: #a7adb4;
+}
+
+small {
+	font-size: 75%;
+	color: #a7adb4;
+	line-height: 1.2;
+}
+
+a, a:hover {
+	-o-transition: color 0.25s ease-in;
+	-webkit-transition: color 0.25s ease-in;
+	-moz-transition: color 0.25s ease-in;
+	transition: color 0.25s ease-in;
+	text-decoration: none;
+}
+
+section, article, header {
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+article {
+	width: 96%;
+	padding: 3em 2%;
+}
+
+@media screen and (max-width: 37.5em) { /* 600px */
+
+	h1 {
+		margin-top: -50px;
+	}
+
+}
+
+</style>
+
+<link rel="stylesheet" href="bugme.css" media="all" />
+
+<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+
+<body>
+
+
+<section>
+	<article>
+		<h1>BugMeBar</h1>
+		<h2>A simple little annoying notification bar plugin</h2>
+		
+		<p>
+			<a href="https://github.com/weare2ndfloor/BugMeBar" title="View BugMe on Github">View BugMeBar on Github</a> or <a href="https://github.com/weare2ndfloor/BugMeBar/archive/master.zip" title="Download BugMeBar as a zip">Download it as a zip</a>
+		</p>
+		
+		<small>
+			Closed the BugMeBar? Just refresh, cookies are disabled on the demo :)
+		</small>
+	</article>
+</section>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script> 
+<script src="jquery.cookie.js"></script> 
+<script src="jquery.bugme.js"></script> 
+<script>
+jQuery(document).ready(function () {
+    jQuery('body').bugme({remember:false});
+});
+</script>
+</body>
+</html>
