@@ -36,17 +36,18 @@ Then call the function…
 Options
 ---
 	target: jQuery(this), // target of where you want the bugme bar to go
-	message: "Message in here", // message that goes inside the bug me bar
-	close: true, // have the close button on or off
-	closeText: "X", // for the little dismiss cross in the top right
-	align: "left", // align the text left, right, center or justify
-	remember: true, // this stores a cookie to remember cancellation of bugme bar
-	expireIn: 7, // set expiry of remember cookie (in days)
-	colours: true, // this will traverse through the colours in the CSS - CSS3 browsers only
-	animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
-	fixed: false, // this will fix bugmebar to the top of the page
-	zindex: 99999, // this will allow you control the z-index of bugmebar
-	cookieName: "bugmebar" // this will allow you set a cookie name
+            message: "Message", // message that goes inside the bug me bar
+            close: true, // have the close button on or off
+            closeText: "X", // for the little dismiss cross in the top right
+            align: "left", // align the text left, right, center or justify
+            remember: true, // this stores a cookie to remember cancellation of bugme bar
+            expireIn: 7, // set expiry of remember cookie (in days)
+            cookieName: "bugmebar", // this will allow you set a cookie name
+            colours: true, // this will traverse through the colours in the CSS - CSS3 browsers only
+            animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
+            fixed: false, // this will fix bugmebar to the top of the page
+            fixedSpacer: false, // want to create a bit of space for a fixed bar? Set to true
+            zindex: 99999 // this will allow you control the z-index of bugmebar
 	
 Browsers
 ---
