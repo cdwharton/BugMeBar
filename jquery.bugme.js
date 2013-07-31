@@ -19,7 +19,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://gnu.org/licenses/>.
  *
- * View the demo at http://weare2ndfloor.com/bugme
+ * View the demo at http://weare2ndfloor.com/bugmebar
  *
  */
 (function ($) {
@@ -79,7 +79,6 @@
             	
             	zindexme = "z-index:" + zindex;
             	
-            	
             	//check for cookie present...
             	var bugCookieExist = jQuery.cookie(cookieName) == "close";
             	
@@ -96,9 +95,6 @@
 	            	
 	            	// slide content as it animates in
 	            	jQuery('.bugme').hide().slideDown();
-	            	
-	            	
-	            	
 	            
 		            if ( colours ) {
 						
