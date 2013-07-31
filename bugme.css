@@ -36,6 +36,12 @@
 	box-sizing: border-box;
 }	
 
+.bugme.bugme-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
 /* For IE7 users where border box doesn't work */
 .ie7 .bugme {
 	width: 96%; 
@@ -160,7 +166,7 @@
 
 /* animated stuff, powered by http://daneden.me/animate/ */
 
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1s;-moz-animation-duration:1s;-ms-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;}
+.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1.25s;-moz-animation-duration:1.25s;-ms-animation-duration:1.25s;-o-animation-duration:1.25s;animation-duration:1.25s;}
 
 
 @-webkit-keyframes bounceInDown {
