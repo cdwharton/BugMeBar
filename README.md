@@ -45,7 +45,8 @@ Options
 	colours: true, // this will traverse through the colours in the CSS - CSS3 browsers only
 	animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
 	fixed: false, // this will fix bugmebar to the top of the page
-	zindex: 99999 // this will allow you control the z-index of bugmebar
+	zindex: 99999, // this will allow you control the z-index of bugmebar
+	cookieName: "bugmebar" // this will allow you set a cookie name
 	
 Browsers
 ---

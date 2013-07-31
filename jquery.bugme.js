@@ -1,5 +1,5 @@
 /**
- * jQuery bugMe v1.0.1
+ * jQuery bugMe v1.0.2
  * Copyright (C) 2013 Chris Wharton (chris@weare2ndfloor.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -35,7 +35,8 @@
             colours: true, // this will traverse through the colours in the CSS - CSS3 browsers only
             animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
             fixed: false, // this will fix bugmebar to the top of the page
-            zindex: 99999 // this will allow you control the z-index of bugmebar
+            zindex: 99999, // this will allow you control the z-index of bugmebar
+            cookieName: "bugme" // this will allow you set a cookie name
         };
         var options = $.extend(defaults, options);
         
@@ -51,6 +52,7 @@
             var expireIn = options.expireIn;
             var fixed = options.fixed;
             var zindex = options.zindex;
+            var cookieName = options.cookieName;
             
             // lets get going
             function bugMe() {
@@ -95,7 +97,7 @@
 							timeoutId = window.setTimeout(addColour, 2000);
 						}
 						function addColour() {
-							jQuery('.bugme').addClass("colours");
+							jQuery('.bugme' , target).addClass("colours");
 						}
 						addColourTimeout();
 		            	
@@ -104,10 +106,10 @@
 		            jQuery('a.bugme-close').on( "click" , function (e) {
 		            	
 		            	e.preventDefault();
-		            	jQuery('.bugme').removeClass("colours").addClass("bounceOutUp");
+		            	jQuery('.bugme' , target).removeClass("colours").addClass("bounceOutUp");
 		            	
 		            	if ( remember ) {
-		            		jQuery.cookie('bugme', 'close', { expires: expireIn, path: '/' });
+		            		jQuery.cookie(cookieName, 'close', { expires: expireIn, path: '/' });
 		            	}
 		            	
 		            	var timeoutId;
@@ -116,10 +118,10 @@
 		            		timeoutId = window.setTimeout(bugMeRemove, 2000);
 		            	}
 		            	function bodyUp() {
-		            		jQuery('.bugme').slideUp();
+		            		jQuery('.bugme' , target).slideUp();
 		            	}
 		            	function bugMeRemove() {
-		            		jQuery('.bugme').remove();
+		            		jQuery('.bugme' , target).remove();
 		            	}
 		            	bodyUpTimeout();
 		            	
