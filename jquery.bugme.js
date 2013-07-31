@@ -36,7 +36,7 @@
             animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
             fixed: false, // this will fix bugmebar to the top of the page
             zindex: 99999, // this will allow you control the z-index of bugmebar
-            cookieName: "bugme" // this will allow you set a cookie name
+            cookieName: "bugmebar" // this will allow you set a cookie name
         };
         var options = $.extend(defaults, options);
         
@@ -80,7 +80,7 @@
             	
             	//check for cookie present...
             	
-            	var bugCookieExist = jQuery.cookie('bugme') == "close";
+            	var bugCookieExist = jQuery.cookie(cookieName) == "close";
             	
             	if ( !bugCookieExist ) {
             	
