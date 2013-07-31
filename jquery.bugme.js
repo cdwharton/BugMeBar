@@ -1,5 +1,5 @@
 /**
- * jQuery bugMe v1.0.2
+ * jQuery bugMe v1.0.3
  * Copyright (C) 2013 Chris Wharton (chris@weare2ndfloor.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -32,11 +32,12 @@
             align: "left", // align the text left, right, center or justify
             remember: true, // this stores a cookie to remember cancellation of bugme bar
             expireIn: 7, // set expiry of remember cookie (in days)
+            cookieName: "bugmebar", // this will allow you set a cookie name
             colours: true, // this will traverse through the colours in the CSS - CSS3 browsers only
             animate: true, // this will animate in and out the bugme bar - CSS3 browsers only
             fixed: false, // this will fix bugmebar to the top of the page
-            zindex: 99999, // this will allow you control the z-index of bugmebar
-            cookieName: "bugmebar" // this will allow you set a cookie name
+            fixedSpacer: false, // want to create a bit of space for a fixed bar? Set to true
+            zindex: 99999 // this will allow you control the z-index of bugmebar
         };
         var options = $.extend(defaults, options);
         
@@ -44,15 +45,16 @@
             var target = options.target;
             var message = options.message;
             var close = options.close;
-            var align = options.align;
             var closeText = options.closeText;
+            var align = options.align;
             var remember = options.remember;
+            var expireIn = options.expireIn;
+            var cookieName = options.cookieName;
             var colours = options.colours;
             var animate = options.animate;
-            var expireIn = options.expireIn;
             var fixed = options.fixed;
+            var fixedSpacer = options.fixedSpacer;
             var zindex = options.zindex;
-            var cookieName = options.cookieName;
             
             // lets get going
             function bugMe() {
@@ -79,15 +81,23 @@
             	
             	
             	//check for cookie present...
-            	
             	var bugCookieExist = jQuery.cookie(cookieName) == "close";
             	
             	if ( !bugCookieExist ) {
             	
 	            	jQuery(target).prepend('<div class="bugme' + animateme + fixme + '" style="text-align:'+ align +';' + zindexme + '">' + message + closer + '</div>'); 
 	            	
+	            	// grab height of bar if its fixed and fixedSpacer is true 
+	            	if ( fixedSpacer && fixed ) {
+	            		var bugmeHeight = jQuery('.bugme' , target).outerHeight();
+	            		// add to the targets margin
+	            		jQuery(target).animate({ marginTop: '+=' + bugmeHeight }, 500);
+	            	}
+	            	
 	            	// slide content as it animates in
 	            	jQuery('.bugme').hide().slideDown();
+	            	
+	            	
 	            	
 	            
 		            if ( colours ) {
@@ -107,7 +117,7 @@
 		            	
 		            	e.preventDefault();
 		            	jQuery('.bugme' , target).removeClass("colours").addClass("bounceOutUp");
-		            	
+		            			            	
 		            	if ( remember ) {
 		            		jQuery.cookie(cookieName, 'close', { expires: expireIn, path: '/' });
 		            	}
@@ -118,6 +128,10 @@
 		            		timeoutId = window.setTimeout(bugMeRemove, 2000);
 		            	}
 		            	function bodyUp() {
+		            		if ( fixedSpacer && fixed ) {
+		            			// animate margin back up again
+		            			jQuery(target).animate({ marginTop: '-=' + bugmeHeight }, 500);
+		            		}
 		            		jQuery('.bugme' , target).slideUp();
 		            	}
 		            	function bugMeRemove() {
