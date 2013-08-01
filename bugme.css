@@ -72,6 +72,11 @@
 	text-align: right;
 }
 
+.bugme-close.bugme-close-left {
+	right: auto;
+	left: 0;
+}
+
 
 /* a little media query to give the bar some more breathing room */
 @media screen and (max-width: 48em) { /* 768px */
@@ -85,10 +90,6 @@
 
 	.bugme {
 		padding: 20px 30px;
-	}
-	
-	.bugme-close {
-		right: 20px;
 	}
 	
 }

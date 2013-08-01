@@ -1,5 +1,5 @@
 /**
- * jQuery bugMe v1.0.3
+ * jQuery bugMe v1.0.4
  * Copyright (C) 2013 Chris Wharton (chris@weare2ndfloor.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -27,9 +27,10 @@
         var defaults = {
             target: jQuery(this), // target of where you want the bugme bar to go
             message: "Super duper exciting announcement goes in here! You can even have a link <a href='http://weare2ndfloor.com'>weare2ndfloor.com</a>", // message that goes inside the bug me bar
+            align: "left", // align the message left, right, center or justify
             close: true, // have the close button on or off
             closeText: "X", // for the little dismiss cross in the top right
-            align: "left", // align the text left, right, center or justify
+            closeAlign: "right", // align close button left or right
             remember: true, // this stores a cookie to remember cancellation of bugme bar
             expireIn: 7, // set expiry of remember cookie (in days)
             cookieName: "bugmebar", // this will allow you set a cookie name
@@ -43,10 +44,11 @@
         
         return this.each(function () {
             var target = options.target;
+            var align = options.align;
             var message = options.message;
             var close = options.close;
             var closeText = options.closeText;
-            var align = options.align;
+            var closeAlign = options.closeAlign;
             var remember = options.remember;
             var expireIn = options.expireIn;
             var cookieName = options.cookieName;
@@ -59,8 +61,14 @@
             // lets get going
             function bugMe() {
             
+            	if ( closeAlign == "left" ) {
+            		closeme = " bugme-close-left";
+            	} else {
+            		closeme = "";
+            	}
+            
             	if ( close ) {
-            		closer = '<a class="bugme-close" href="#">' + closeText + '</a>';
+            		closer = '<a class="bugme-close' + closeme + '" href="#">' + closeText + '</a>';
             	} else {
             	    closer = "";        
             	}
@@ -76,6 +84,7 @@
             	} else {
             	    fixme = "";        
             	}
+            	
             	
             	zindexme = "z-index:" + zindex;
             	

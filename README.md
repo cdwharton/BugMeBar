@@ -36,10 +36,11 @@ Then call the function…
 Options
 ---
 	target: jQuery(this), // target of where you want the bugme bar to go
-            message: "Message", // message that goes inside the bug me bar
+            message: "Super duper exciting announcement goes in here! You can even have a link <a href='http://weare2ndfloor.com'>weare2ndfloor.com</a>", // message that goes inside the bug me bar
+            align: "left", // align the message left, right, center or justify
             close: true, // have the close button on or off
             closeText: "X", // for the little dismiss cross in the top right
-            align: "left", // align the text left, right, center or justify
+            closeAlign: "right", // align close button left or right
             remember: true, // this stores a cookie to remember cancellation of bugme bar
             expireIn: 7, // set expiry of remember cookie (in days)
             cookieName: "bugmebar", // this will allow you set a cookie name
