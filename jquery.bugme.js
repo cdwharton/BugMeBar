@@ -1,5 +1,5 @@
 /**
- * jQuery bugMe v1.0.5
+ * jQuery bugMe v1.0.6
  * Copyright (C) 2013 Chris Wharton (chris@weare2ndfloor.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -91,7 +91,7 @@
             	//check for cookie present...
             	var bugCookieExist = jQuery.cookie(cookieName) == "close";
             	
-            	if ( !bugCookieExist ) {
+            	if ( !bugCookieExist || !remember ) {
             	
 	            	jQuery(target).prepend('<div class="bugme' + animateme + fixme + '" style="text-align:'+ align +';' + zindexme + '">' + message + closer + '</div>'); 
 	            	
