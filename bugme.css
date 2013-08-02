@@ -167,10 +167,10 @@
 
 /* animated stuff, powered by http://daneden.me/animate/ */
 
-.animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1.25s;-moz-animation-duration:1.25s;-ms-animation-duration:1.25s;-o-animation-duration:1.25s;animation-duration:1.25s;}
+.bugmebar-animated{-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-ms-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-duration:1.25s;-moz-animation-duration:1.25s;-ms-animation-duration:1.25s;-o-animation-duration:1.25s;animation-duration:1.25s;}
 
 
-@-webkit-keyframes bounceInDown {
+@-webkit-keyframes bugmebar-bounceInDown {
 	0% {
 		opacity: 0;
 		-webkit-transform: translateY(-2000px);
@@ -188,7 +188,7 @@
 	}
 }
 
-@-moz-keyframes bounceInDown {
+@-moz-keyframes bugmebar-bounceInDown {
 	0% {
 		opacity: 0;
 		-moz-transform: translateY(-2000px);
@@ -208,7 +208,7 @@
 	}
 }
 
-@-o-keyframes bounceInDown {
+@-o-keyframes bugmebar-bounceInDown {
 	0% {
 		opacity: 0;
 		-o-transform: translateY(-2000px);
@@ -228,7 +228,7 @@
 	}
 }
 
-@keyframes bounceInDown {
+@keyframes bugmebar-bounceInDown {
 	0% {
 		opacity: 0;
 		transform: translateY(-2000px);
@@ -248,13 +248,13 @@
 	}
 }
 
-.bounceInDown {
-	-webkit-animation-name: bounceInDown;
-	-moz-animation-name: bounceInDown;
-	-o-animation-name: bounceInDown;
-	animation-name: bounceInDown;
+.bugmebar-bounceInDown {
+	-webkit-animation-name: bugmebar-bounceInDown;
+	-moz-animation-name: bugmebar-bounceInDown;
+	-o-animation-name: bugmebar-bounceInDown;
+	animation-name: bugmebar-bounceInDown;
 }
-@-webkit-keyframes bounceOutUp {
+@-webkit-keyframes bugmebar-bounceOutUp {
 	0% {
 		-webkit-transform: translateY(0);
 	}
@@ -270,7 +270,7 @@
 	}
 }
 
-@-moz-keyframes bounceOutUp {
+@-moz-keyframes bugmebar-bounceOutUp {
 	0% {
 		-moz-transform: translateY(0);
 	}
@@ -286,7 +286,7 @@
 	}
 }
 
-@-o-keyframes bounceOutUp {
+@-o-keyframes bugmebar-bounceOutUp {
 	0% {
 		-o-transform: translateY(0);
 	}
@@ -302,7 +302,7 @@
 	}
 }
 
-@keyframes bounceOutUp {
+@keyframes bugmebar-bounceOutUp {
 	0% {
 		transform: translateY(0);
 	}
@@ -318,11 +318,11 @@
 	}
 }
 
-.bounceOutUp {
-	-webkit-animation-name: bounceOutUp;
-	-moz-animation-name: bounceOutUp;
-	-o-animation-name: bounceOutUp;
-	animation-name: bounceOutUp;
+.bugmebar-bounceOutUp {
+	-webkit-animation-name: bugmebar-bounceOutUp;
+	-moz-animation-name: bugmebar-bounceOutUp;
+	-o-animation-name: bugmebar-bounceOutUp;
+	animation-name: bugmebar-bounceOutUp;
 }
 
 

@@ -1,5 +1,5 @@
 /**
- * jQuery bugMe v1.0.4
+ * jQuery bugMe v1.0.5
  * Copyright (C) 2013 Chris Wharton (chris@weare2ndfloor.com)
  *
  * This program is free software: you can redistribute it and/or modify
@@ -74,7 +74,7 @@
             	}
             	
             	if ( animate ) {
-            		animateme = ' animated bounceInDown';
+            		animateme = ' bugmebar-animated bugmebar-bounceInDown';
             	} else {
             	    animateme = "";        
             	}
@@ -121,7 +121,7 @@
 		            jQuery('a.bugme-close').on( "click" , function (e) {
 		            	
 		            	e.preventDefault();
-		            	jQuery('.bugme' , target).removeClass("colours").addClass("bounceOutUp");
+		            	jQuery('.bugme' , target).removeClass("colours").addClass("bugmebar-bounceOutUp");
 		            			            	
 		            	if ( remember ) {
 		            		jQuery.cookie(cookieName, 'close', { expires: expireIn, path: '/' });
