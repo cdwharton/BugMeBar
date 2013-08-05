@@ -143,6 +143,7 @@
 		            	}
 		            	function bugMeRemove() {
 		            		jQuery('.bugme' , target).remove();
+		            		jQuery('body').removeClass('bugmebar');
 		            	}
 		            	bodyUpTimeout();
 		            	
